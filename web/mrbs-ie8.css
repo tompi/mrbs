@@ -1,0 +1,29 @@
+/* $Id: mrbs-ie8.css 1617 2010-11-18 19:02:44Z cimorrison $ */
+
+/* Fixes for Internet Explorer 8 */
+
+
+/* ------------ FORM_GENERAL ------------------------*/
+/* Even though no max-height is set, IE8 will clip content */
+/* when overflow is set to hidden.    Therefore we need to */
+/* set it to visible explicitly for the y direction        */
+.form_general label {overflow-y: visible}
+.form_general #ad label {overflow-y: auto} /* undo for all-day checkbox */
+.edit_area_room div.group {width: 25em} /* not necessary in IE7 or IE9 ?! */
+.edit_entry div.group {width: 50em} /* not necessary in IE7 or IE9 ?! */
+.edit_entry #div_start_date div.group {width: 20em}
+.report div.group {width: 40em} /* not necessary in IE7 or IE9 ?! */
+
+
+/* ------------ TRAILER.INC ---------------------*/
+
+/* opacity for IE8 is implemented with filter, but only works if the element */
+/* is positioned;  you can also get filter to work by using zoom.   However  */
+/* the zoom only works if the element is a block or inline-block; we need it */
+/* to be inline, hence the inline-block.    Note also that in IE8 you have   */
+/* to use -ms-zoom and -ms-filter instead of zoom and filter                 */
+#trailer span.hidden {
+    display: inline-block;            /* to force the zoom to work */
+    -ms-zoom: 1;                      /* to force the filter to work */
+    -ms-filter: "alpha(opacity=50)";  /* keep the value in step with the main stylesheet */
+}

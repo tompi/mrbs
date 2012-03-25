@@ -1,0 +1,130 @@
+Upgrade Information for previous releases of MRBS:
+--------------------------------------------------
+
+If you are upgrading from MRBS 1.2-pre3 or later, then MRBS will
+automatically execute any necessary database upgrades when it is first
+run.   It will prompt you for a database (not MRBS) username and password
+with rights to create and alter tables.
+
+It would be a sensible precaution to take a backup of your database before
+the upgrade.
+
+MRBS database upgrades are in general intended to be backwards compatible,
+so that you should still be able to run the old version of MRBS against the
+new database schema.   This will allow you to install the new version of MRBS
+in a separate directory while you configure and test it.   When you are happy
+with the new release you can switch the directory to be your production
+directory.
+
+There are however some exceptions to this backward compatiblity, namely at
+the following transitions:
+
+MRBS 1.4.4.1 -> 1.4.5
+
+In these cases you will not be able to run the old version of MRBS against
+the upgraded database.   You may therefore choose to make a copy of the
+database for test purposes and check that the upgrade process works before
+performing the upgrade on your production database.
+
+
+Upgrading from prior MRBS 1.4.6
+===============================
+
+If you were previously using MRBS with $unicode_encoding set to 0, when
+you upgrade to 1.4.6 you _MUST_ upgrade the MySQL database from the
+previously used character set to Unicode :
+
+          You need to use the convert_db_to_utf8.php script to convert text
+          in the database to UTF8. The administrator should copy the file
+          into the web directory, run it (choosing the encoding to convert
+          from) ONCE, and then move it back out of the web directory. We
+          recommend you backup your database before running this script if
+          you are at all worried.
+          Running it more than once will make a right mess of any non-ASCII 
+          text in the database. 
+
+          Additionally, this script can correct an MRBS database that used
+          to run on an old version of MySQL (earlier than 4.1), but that
+          now run on a newer version of MySQL. In this case, the database
+          contains UTF-8 text, but the tables are considered to be in some
+          other encoding by MySQL, generally Latin-1. The
+          convert_db_to_utf8.php detects this condition, and offers
+          the administrator the chance to correct the database 'collation'.
+
+===
+
+The following configuration variables are now deprecated.   Their use is
+supported for the moment but you should change your config file now to
+use the new variables as support for the old variables may be dropped in the
+future:
+
+$mail_settings['admin_all']        replaced by  $mail_settings['on_new'] and
+                                                $mail_settings['on_change']
+$mail_settings['admin_on_delete']  replaced by  $mail_settings['on_delete']
+$dateformat                        replaced by  $strftime_format['daymonth']
+
+
+Upgrading from prior MRBS 1.4.5
+===============================
+MRBS 1.4.5 introduces the concept of tentative bookings, or bookings that
+require confirmation.   To avoid confusion, what were previously known as
+"provisional bookings" have now been renamed "bookings requiring approval"
+and the config variable $provisional_enabled has been renamed
+$approval_enabled.   You should update your config file accordingly.
+
+Please also see the note about database compatibility above.
+
+
+Upgrading from prior MRBS 1.2-pre3
+==================================
+
+mrbs 1.2-pre3 introduced area and room administrator email fields.
+
+Please apply the upgrade3.my.sql to add these fields. This file should work 
+both with mysql and pgsql.
+
+
+Upgrading from prior MRBS 1.2-pre2
+==================================
+
+Upgrading mysql database from previous charsets to Unicode :
+
+          You can use convert_db_to_utf8.php script to convert text in the 
+          database to UTF8. The administrator should copy the file into
+          the web directory, run it (choosing the encoding to convert from)
+          ONCE, and then move it back out of the web directory. We recommend
+          you backup your database before running this script if you are at
+          all worried.
+          Running it more than once will make a right mess of any non-ASCII 
+          text in the database. 
+
+
+Upgrading from prior to MRBS 1.0 final
+======================================
+
+Please apply the upgrade2.my.sql (if using MySQL) or the
+the upgrade2.pg.sql (if using PostgreSQL) script, which
+adds a new column to the 'mrbs_repeat' table to support
+"n-weekly" repeats.
+
+
+Upgrading from prior to MRBS 1.0-pre1
+======================================
+
+A change in version 1.0-pre1 might affect the appearance of entries in your
+existing database. Prior versions of MRBS did an extra and unnecessary
+level of backslash-escaping on room, area, and entry names and
+descriptions. This applied to certain characters such as single quote
+mark(') and backslash(\). As of version 1.0-pre1, these characters are
+handled correctly. If you see extra backslashes when MRBS displays names or
+descriptions, it is because these are in actually your database.  You can
+edit the entries in MRBS or directly with your database SQL tool, or just
+ignore them.
+
+
+Upgrading from prior to MRBS 0.7
+================================
+There was a change to the database schema at version 0.7. See the
+information in INSTALL on using the upgrade.my.sql script.
+
+$Id: UPGRADE 1759 2011-01-27 08:34:14Z cimorrison $

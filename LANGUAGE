@@ -1,0 +1,40 @@
+        MRBS Language Support
+
+Each "lang.*" file (in the web/ directory) contains the text strings for
+a language.  Not all of these files are complete.  Note that MRBS always
+reads the reference file "lang.en" first, before reading another language
+file.
+
+Porting MRBS to another language is relatively easy. From the Admin page,
+you will see "Your browser is set to use "xx" language". If no "lang.xx"
+file is available, copy "lang.en" to "lang.xx" (replace xx with the code
+you found in Admin), and then edit the file to change the English strings
+to your language.  For example, you might
+change: $vocab["gototoday"] = "Go To Today";
+    to: $vocab["gototoday"] = "gehe zum heutigen Tag";
+
+You will then find that MRBS starts to use your language file
+automatically. If you are having trouble getting this to work, see the
+language section of config.inc.php.
+
+If you would like to complete or improve an existing language file, the
+"checklang.php" script included in the distribution can help. Copy this
+to your web server area, into the same directory as the MRBS lang.* files.
+Now use your browser to access:
+         http://your-host-and-dir/checklang.php?lang=xx
+(where "xx" is the code of the language file you want to check). This
+will report missing or untranslated strings in "lang.xx" compared to
+"lang.en". If you omit the parameter and access:
+         http://your-host-and-dir/checklang.php
+you will see the results of checking all available language files.
+
+If you do create or improve a language file, please post a message about
+it on the mailing list, so it can be included in future releases. Thanks!
+
+Important note: You should not use any HTML entities in the translation
+other than &nbsp;. If you need to use any other characters that don't fit
+in your single-byte encoding (e.g. iso-8859-1) you should change your
+language's encoding to utf-8, and then you can use whatever characters you
+would like, encoded in utf-8.
+
+$Id: LANGUAGE 937 2008-10-16 21:29:27Z jberanek $

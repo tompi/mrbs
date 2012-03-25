@@ -1,0 +1,211 @@
+<!-- $Id: site_faq.html 2142 2011-10-23 18:47:56Z cimorrison $ -->
+
+<div id="site_faq_contents">
+  <a id="top"></a><h4>Authentication</h4>
+  <ul>
+    <li><a href="#authenticate">How do I login?</a></li>
+    <li><a href="#meeting_delete">Why can't I delete/alter a meeting?</a></li>
+  </ul>
+  
+  <h4>Making/Altering Meetings</h4>
+  <ul>
+    <li><a href="#repeating">How do I make a recurring meeting?</a></li>
+    <li><a href="#repeating_delete">How do I delete one instance of a recurring meeting?</a></li>
+    <li><a href="#multiple_sites">How do I schedule rooms at different sites?</a></li>
+    <li><a href="#too_many">My meeting failed to be created because of <q>too many entries</q>!</a></li>
+    <li><a href="#multiple_users">What happens if multiple people schedule the same meeting?</a></li>
+  </ul>
+  
+  <h4>Miscellaneous</h4>
+  <ul>
+    <li><a href="#internal_external">What is the difference between <q>Internal</q> and <q>External</q>?</a></li>
+  </ul>
+  
+  <h4>About The Meeting Room Booking System</h4>
+  <ul>
+    <li><a href="#how_much">How much did the system cost?</a></li>
+    <li><a href="#about">How does the system work and who wrote it?</a></li>
+  </ul>
+</div>
+
+<div id="site_faq_body">
+
+  <div id="authenticate">
+    <h4>How do I login?</h4>
+    <p>
+      The system can be configured to use one of several methods of authentication,
+      including LDAP, Netware, and SMB. See your system administrator if you
+      are having trouble logging in. Some functions are restricted to certain
+      users, and other users will get the message <q>You do not have access rights to
+      modify this item</q>. See your system administrator if this is not working
+      correctly for you.
+      If the system is configured to use LDAP authentication, this means that you
+      login with the same username and password as you use for getting email
+      e.g. <q>Mark Belanger</q> and <q>MyPassword</q>.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="meeting_delete">
+    <h4>Why can't I delete/alter a meeting?</h4>
+    <p>
+      In order to delete or alter a meeting, you must be logged in as the
+      same person that made the meeting.  Contact one of the meeting room
+      administrators or the person who initially made the meeting to
+      have it deleted or changed.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="repeating">
+    <h4>How do I make a recurring meeting?</h4>
+    <p>
+      Clicking on the desired time brings you into the booking screen.
+      Select the appropriate <dfn>Repeat Type</dfn>. The room will be scheduled
+      at the same time, until the <dfn>Repeat End Date</dfn>, on the days
+      determined by the Repeat Type.
+    </p>
+    <ul>
+      <li>
+        A <dfn>Daily</dfn> repeat schedules every day.
+      </li>
+      <li>
+        A <dfn>Weekly</dfn> repeat schedules those days of the week that you
+        check under <dfn>Repeat Day</dfn>. For example, use Weekly repeat
+        to schedule the room every Monday, Tuesday, and Thursday; check
+        those days under Repeat Day. If you check no days under Repeat Day,
+        the schedule will repeat on the same day of each week as the first
+        scheduled day.
+      </li>
+      <li>
+        An <dfn>N_Weekly</dfn> repeat is the same as a Weekly repeat, except
+        that the bookings are only made for every Nth week where N is 
+        entered under <dfn>Number of Weeks</dfn>.   For example, to make
+        a booking for every other week, use 2 for the number of weeks.
+      </li>
+      <li>
+        A <dfn>Monthly</dfn> repeat schedules the same day of each month,
+        for example the 15th of the month.  If you select the 29th, 30th
+        or 31st of the month, then for a month where that day does not
+        exist the last day of that month will be used instead.
+      </li>
+      <li>
+        A <dfn>Yearly</dfn> repeat schedules the same month and day of the month,
+        for example every March 15th.   If you select the 29th February, then
+        for those years where that date does not exist the 28th February will
+        be used instead.
+      </li>
+      <li>
+        Finally, a <dfn>Monthly, corresponding day</dfn> repeat schedules one day
+        each month, the same weekday and ordinal position within the month.
+        Use this repeat type to schedule the first Monday, second Tuesday,
+        or fourth Friday of each month, for example.  If you have selected the 29th, 30th
+        or 31st of the month, i.e. the fifth weekday of a month, then for those 
+        months where there is no corresponding fifth day, the fourth day will 
+        be used instead.  (This is a useful way of booking the last weekday in
+        every month).
+      </li>
+    </ul>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="repeating_delete">
+    <h4>How do I delete one instance of a recurring meeting?</h4>
+    <p>
+      Select the day/room/time that you want to delete and select <dfn>Delete Entry</dfn>.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="multiple_sites">
+    <h4>How do I schedule rooms at different sites?</h4>
+    <p>
+      You don't.  Presently the system cannot book two different rooms simultaneously.
+      You must schedule each one separately.  Make sure that the time you want
+      is available at both sites before making a booking.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="too_many">
+    <h4>My meeting failed to be created because of <q>too many entries</q>!</h4>
+    <p>
+      No meeting can create more than 365 entries.  There needs to be some limit on the number of meetings created.  
+      This number can be increased if necessary.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="multiple_users">
+    <h4>What happens if multiple people schedule the same meeting?</h4>
+    <p>
+      The short answer is: The first person to click on
+      the <dfn>Submit</dfn> button wins.
+      Behind the scenes, the system is using a proper multi-user, multi-threaded
+      relational database than can handle many thousands of simultaneous users.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="internal_external">
+    <h4>What is the difference between <q>Internal</q> and <q>External</q>?</h4>
+    <p>
+      By default, MRBS defines two meeting types. <dfn>Internal</dfn> means that the
+      meeting will only be attended by employees.  An <dfn>External</dfn> meeting
+      might also be attended by customers, vendors, investors, etc. Your site
+      can define up to a total of 10 meeting types, according to your needs.
+      Meetings are highlighted in the main calendar view with a color corresponding
+      to their type, and a color key of all defined types is shown at the bottom
+      of the main calendar view.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="how_much">
+    <a></a><h4>How much did the system cost?</h4>
+    <p>
+      Nothing.  See the next section for more information.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+  <div id="about">
+    <h4>How does the system work and who wrote it?</h4>
+    <p>
+      The <a href="http://sourceforge.net/project/?group_id=5113">Meeting Room Booking System</a>
+      is open source software that is distributed under the Gnu Public License(GPL).
+      This means that software is free to use, distribute, and modify. 
+    </p> 
+    <p>
+      The system is written mostly in <a href="http://www.php.net">PHP</a>, 
+      which is an open source programming language that can be embedded in web 
+      pages similar in concept to Microsoft active server pages.  PHP is especially 
+      good at accessing databases.
+    </p>
+    <p>  
+      The database used for the system is either
+      <a href="http://www.mysql.com">MySQL</a>
+      or <a href="http://www.postgresql.org">PostgreSQL</a>.
+      MySQL is a very fast, multi-threaded, multi-user and robust 
+      SQL (Structured Query Language) database server that is also GPL.
+      PostgreSQL is a full-featured multi-user open source Object Relational SQL
+      database server.
+    </p>
+    <p> 
+      The system will run on multiple platforms, including the PC architecture
+      using the <a href="http://www.linux.com">Linux</a> operating system.
+      Linux, is a free, open source, unix-like operating system.
+    </p>
+    <p>
+      The web server being used is yet another piece of free, open source
+      software.  The <a href="http://www.apache.org">Apache</a> web server is
+      the world's most popular web server.
+    </p>
+    <p>
+      The bottom line is: <strong>every piece of this system, from the operating system to the application,
+      is completely free - source code and all</strong>.
+    </p>
+    <a href="#top">Top</a>
+  </div>
+  
+</div>

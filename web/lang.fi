@@ -1,0 +1,300 @@
+<?php // -*-mode: PHP; coding:utf-8;-*-
+
+// $Id : lang.fi,v 1.1 Thu Jan 30 2003 thierry_bo Exp $
+
+// This file contains PHP code that specifies language specific strings
+// The default strings come from lang.en, and anything in a locale
+// specific file will overwrite the default. This is the Finnish version.
+//
+// Translation by Vesa Palmu ( vesa.palmu@no... ),
+// 2005 Tom Ingberg (tom.ingberg@iki.fi.invalid)
+//
+// This file is PHP code. Treat it as such.
+
+// Used in style.inc
+$vocab["mrbs"]               = "Huonetilojen varausjärjestelmä";
+
+// Used in functions.inc
+$vocab["report"]             = "Raportit";
+$vocab["admin"]              = "Ylläpito";
+$vocab["help"]               = "Ohjeet";
+$vocab["search"]             = "Etsi";
+$vocab["not_php3"]           = "Varoitus: Järjestelmä ei välttämättä toimi PHP3:lla.";
+
+// Used in day.php
+$vocab["bookingsfor"]        = "Varaukset";
+$vocab["bookingsforpost"]    = ""; // Goes after the date
+$vocab["areas"]              = "Tilat";
+$vocab["daybefore"]          = "Edelliseen päivään";
+$vocab["dayafter"]           = "Seuraavaan päivään";
+$vocab["gototoday"]          = "Tähän päivään";
+$vocab["goto"]               = "mene";
+$vocab["highlight_line"]     = "Korosta tämä rivi";
+$vocab["click_to_reserve"]   = "Napsauta solua tehdäksesi varauksen.";
+
+// Used in trailer.inc
+$vocab["viewday"]            = "Näytä päivä";
+$vocab["viewweek"]           = "Näytä viikko";
+$vocab["viewmonth"]          = "Näytä kuukausi";
+$vocab["ppreview"]           = "Tulostuksen esikatselu";
+
+// Used in edit_entry.php
+$vocab["addentry"]           = "Lisää varaus";
+$vocab["editentry"]          = "Muokkaa varausta";
+$vocab["copyentry"]          = "Kopioi varaus";
+$vocab["editseries"]         = "Muokkaa varaussarjaa";
+$vocab["copyseries"]         = "Kopioi varaussarja";
+$vocab["namebooker"]         = "Lyhyt kuvaus";
+$vocab["fulldescription"]    = "Täydellinen kuvaus:<br>&nbsp;&nbsp;(Montako ihmistä,<br>&nbsp;&nbsp;sisäinen/ulkoinen jne)";
+$vocab["date"]               = "Päivämäärä";
+$vocab["start_date"]         = "Aloitusaika";
+$vocab["end_date"]           = "Lopetusaika";
+$vocab["time"]               = "Aika";
+$vocab["period"]             = "Jakso";
+$vocab["duration"]           = "Kesto";
+$vocab["seconds"]            = "sekuntia";
+$vocab["minutes"]            = "minuuttia";
+$vocab["hours"]              = "tuntia";
+$vocab["days"]               = "päivää";
+$vocab["weeks"]              = "viikkoa";
+$vocab["years"]              = "vuotta";
+$vocab["periods"]            = "jaksoa";
+$vocab["all_day"]            = "Koko päivän";
+$vocab["area"]               = "Alue";
+$vocab["type"]               = "Tyyppi";
+$vocab["save"]               = "Tallenna";
+$vocab["rep_type"]           = "Toiston tyyppi";
+$vocab["rep_type_0"]         = "Ei toistoa";
+$vocab["rep_type_1"]         = "Päivittäin";
+$vocab["rep_type_2"]         = "Viikoittain";
+$vocab["rep_type_3"]         = "Kuukausittain";
+$vocab["rep_type_4"]         = "Vuosittain";
+$vocab["rep_type_5"]         = "Kuukausittain samana viikonpäivänä";
+$vocab["rep_type_6"]         = "Määräaikainen viikoittainen";
+$vocab["rep_end_date"]       = "Toiston loppupäivämäärä";
+$vocab["rep_rep_day"]        = "Toiston viikonpäivä";
+$vocab["rep_for_weekly"]     = "(viikottaiselle toistolle)";
+$vocab["rep_freq"]           = "Tiheys";
+$vocab["rep_num_weeks"]      = "Montako viikkoa";
+$vocab["rep_for_nweekly"]    = "(määräaikaiselle viikottaiselle)";
+$vocab["ctrl_click"]         = "Pidä CTRL-nappi pohjassa valitaksesi useita huoneita.";
+$vocab["entryid"]            = "Varauksen ID ";
+$vocab["repeat_id"]          = "Toiston ID "; 
+$vocab["you_have_not_entered"] = "Et ole antanut seuraavaa pakollista tietoa";
+$vocab["you_have_not_selected"] = "Et ole valinnut";
+$vocab["valid_room"]         = "huonetta.";
+$vocab["brief_description"]  = "Lyhyt kuvaus";
+$vocab["useful_n-weekly_value"] = "Määräaikaisen viikottaisen varauksen viikkomäärä.";
+$vocab["private"]            = "Yksityinen";
+$vocab["unavailable"]        = "Yksityinen";
+
+// Used in view_entry.php
+$vocab["description"]        = "Kuvaus";
+$vocab["room"]               = "Huone";
+$vocab["createdby"]          = "Varauksen tekijä";
+$vocab["lastupdate"]         = "Päivitetty";
+$vocab["deleteentry"]        = "Poista varaus";
+$vocab["deleteseries"]       = "Poista varaussarja";
+$vocab["confirmdel"]         = "Oletko varma että haluat poistaa\\ntämän varauksen?\\n\\n";
+$vocab["returnprev"]         = "Takaisin edelliselle sivulle";
+$vocab["invalid_entry_id"]   = "Virheellinen varauksen ID.";
+$vocab["invalid_series_id"]  = "Virheellinen sarjan ID.";
+
+// Used in edit_entry_handler.php
+$vocab["error"]              = "Virhe";
+$vocab["sched_conflict"]     = "Päällekkäinen varaus";
+$vocab["conflict"]           = "Uusi varaus menee päällekkäin seuraavien varausten kanssa";
+$vocab["rules_broken"]       = "Uusi varaus on ristiriidassa seuraavien käytäntöjen kanssa";
+$vocab["too_may_entrys"]     = "Valituilla ehdoilla tulisi liian monta varausta.<br>Valittuja ehtoja on muutettava.";
+$vocab["returncal"]          = "Paluu kalenterinäkymään";
+$vocab["failed_to_acquire"]  = "Tietokantaan ei saatu (varauksetonta) yhteyttä."; 
+$vocab["invalid_booking"]    = "Virheellinen varaus";
+$vocab["must_set_description"] = "Varaukselle tulee asettaa kuvaus. Palaa takaisin ja korjaa puutteet.";
+$vocab["mail_subject_new_entry"]     = "Varaus lisätty yritykselle $mrbs_company MRBS-järjestelmässä";
+$vocab["mail_subject_changed_entry"] = "Varaus muutettu yritykselle $mrbs_company MRBS-järjestelmässä";
+$vocab["mail_subject_delete"]        = "Varaus poistettu yritykselle $mrbs_company MRBS-järjestelmässä";
+$vocab["mail_body_new_entry"]     = "Uusi varaus lisätty:";
+$vocab["mail_body_changed_entry"] = "Varauksen tietoja muokattu:";
+$vocab["mail_body_del_entry"]     = "Varaus poistettu:";
+
+// Authentication stuff
+$vocab["accessdenied"]       = "Pääsy kielletty";
+$vocab["norights"]           = "Sinulla ei ole riittävästi oikeuksia yrittämäsi toiminnon suorittamiseen.";
+$vocab["please_login"]       = "Ole hyvä ja kirjaudu sisään";
+$vocab["users.name"]          = "Käyttäjätunnus";
+$vocab["users.password"]      = "Salasana";
+$vocab["users.level"]         = "Käyttöoikeudet";
+$vocab["unknown_user"]       = "Tuntematon käyttäjä";
+$vocab["you_are"]            = "Olet";
+$vocab["login"]              = "Kirjaudu sisään";
+$vocab["logoff"]             = "Kirjaudu ulos";
+
+// Database upgrade code
+$vocab["database_login"]           = "Tietokannan tunnus"; //Database login, mitä tarkottanee???
+$vocab["upgrade_required"]         = "Tietokanta tulee päivittää.";
+$vocab["supply_userpass"]          = "Tietokannan ylläpidon käyttäjätunnus ja salasana."; //Please supply a database username and password that has admin rights.
+$vocab["contact_admin"]            = "Mikäli et ole MRBS-järjestelmän ylläpitäjä, ota yhteys $mrbs_admin.";
+$vocab["upgrade_to_version"]       = "Päivitetään tietokantaa versioon";
+$vocab["upgrade_to_local_version"] = "Päivitetään tietokantaa paikalliseen versioon";
+$vocab["upgrade_completed"]        = "Tietokannan päivitys valmis.";
+
+// User access levels
+$vocab["level_0"]            = "ei käyttöoikeuksia";
+$vocab["level_1"]            = "käyttäjä";
+$vocab["level_2"]            = "ylläpitäjä";
+$vocab["level_3"]            = "järjestelmänhaltija";//user admin??
+
+// Authentication database
+$vocab["user_list"]          = "Käyttäjälista";
+$vocab["edit_user"]          = "Muokkaa käyttäjää";
+$vocab["delete_user"]        = "Poista tämä käyttäjä";
+//$vocab["users.name"]         = Use the same as above, for consistency.
+//$vocab["users.password"]     = Use the same as above, for consistency.
+$vocab["users.email"]         = "Sähköpostiosoite";
+$vocab["password_twice"]     = "Jos haluat vaihtaa salasanan, ole hyvä ja anna uusi salasana kahdesti";
+$vocab["passwords_not_eq"]   = "Virhe: Salasanat eivät täsmää.";
+$vocab["add_new_user"]       = "Lisää uusi käyttäjä";
+$vocab["action"]             = "Toiminto";
+$vocab["user"]               = "Käyttäjä";
+$vocab["administrator"]      = "Ylläpitäjä";
+$vocab["unknown"]            = "Tuntematon";
+$vocab["ok"]                 = "OK";
+$vocab["show_my_entries"]    = "Näytä tulevat tapahtumat";
+$vocab["no_users_initial"]   = "Ei käyttäjiä tietokannassa, sallitaan ensimmäisten käyttäjien luominen";
+$vocab["no_users_create_first_admin"] = "Luo tunnus ylläpitäjän oikeuksilla. Tämän jälkeen kirjaudu kyseisellä tunnuksella sisään ja luo kyseisen tunnuksen avulla tunnukset järjestelmän muille käyttäjille.";
+$vocab["warning_last_admin"] = "Varoitus! Käyttäjä on viimeinen ylläpito-oikeuksilla varustettu käyttäjä, eikä sitä voida poistaa.";
+
+// Used in search.php
+$vocab["invalid_search"]     = "Tyhjä tai kelpaamaton haku.";
+$vocab["search_results"]     = "Hakutulokset";
+$vocab["nothing_found"]      = "Yhtään varausta ei löytynyt antamillasi ehdoilla. ";
+$vocab["records"]            = "Tulokset ";
+$vocab["through"]            = " - ";
+$vocab["of"]                 = " tuloksia yhteensä: ";
+$vocab["previous"]           = "Edellinen";
+$vocab["next"]               = "Seuraava";
+$vocab["entry"]              = "Varaus";
+$vocab["advanced_search"]    = "Tarkennettu haku";
+$vocab["search_button"]      = "Hae";
+$vocab["search_for"]         = "Etsi";
+$vocab["from"]               = "Alkaen";
+
+// Used in report.php
+$vocab["report_on"]          = "Raportti varauksista";
+$vocab["report_start"]       = "Raportin alkupäivämäärä";
+$vocab["report_end"]         = "Raportin loppupäivämäärä";
+$vocab["match_area"]         = "Alue";
+$vocab["match_room"]         = "Huone";
+$vocab["match_type"]         = "Tyyppi";
+$vocab["ctrl_click_type"]    = "Pidä Ctrl-näppäin alaspainettuna valitaksesi useamman tyypin.";
+$vocab["match_entry"]        = "Lyhyt kuvaus";
+$vocab["match_descr"]        = "Täydellinen kuvaus";
+$vocab["include"]            = "Sisältäen";
+$vocab["report_only"]        = "Ainoastaan raportti";
+$vocab["summary_only"]       = "Ainoastaan yhteenveto";
+$vocab["report_and_summary"] = "Molemmat";
+$vocab["summarize_by"]       = "Yhteenvedon peruste";
+$vocab["sum_by_descrip"]     = "Lyhyt kuvaus";
+$vocab["sum_by_creator"]     = "Varaaja";
+$vocab["entry_found"]        = "varaus löytyi";
+$vocab["entries_found"]      = "varausta löytyi";
+$vocab["summary_header"]     = "Varausten tunnit yhteensä";
+$vocab["summary_header_per"] = "Yhteenveto varausten aikajaksoista";
+$vocab["total"]              = "Kaikkiaan";
+$vocab["submitquery"]        = "Tee raportti";
+$vocab["sort_rep"]           = "Raporttien lajittelun peruste";
+$vocab["sort_rep_time"]      = "Aloitusaika";
+ 
+// Used in week.php
+$vocab["weekbefore"]         = "Edelliseen viikkoon";
+$vocab["weekafter"]          = "Seuraavaan viikkoon";
+$vocab["gotothisweek"]       = "Tähän viikkoon";
+
+// Used in month.php
+$vocab["monthbefore"]        = "Edelliseen kuukauteen";
+$vocab["monthafter"]         = "Seuraavaan kuukauteen";
+$vocab["gotothismonth"]      = "Tähän kuukauteen";
+
+// Used in {day week month}.php
+$vocab["no_rooms_for_area"]  = "Tällä alueella ei ole yhtään huonetta.";
+
+// Used in admin.php
+$vocab["edit"]               = "Muokkaa";
+$vocab["delete"]             = "Poista";
+$vocab["rooms"]              = "Huoneet";
+$vocab["in"]                 = "alueella";
+$vocab["noareas"]            = "Ei alueita";
+$vocab["addarea"]            = "Lisää alue";
+$vocab["name"]               = "Nimi";
+$vocab["noarea"]             = "Ei valittua aluetta";
+$vocab["browserlang"]        = "Selaimesi kieliasetus on";
+$vocab["addroom"]            = "Lisää huone";
+$vocab["capacity"]           = "Maksimi henkilömäärä";
+$vocab["norooms"]            = "Ei huoneita.";
+$vocab["administration"]     = "Ylläpito";
+$vocab["invalid_area_name"]  = "Alueen nimi on jo käytössä!";
+
+// Used in edit_area_room.php
+$vocab["editarea"]           = "Muokkaa alueen tietoja";
+$vocab["change"]             = "Tallenna";
+$vocab["backadmin"]          = "Takaisin ylläpitoon";
+$vocab["editroomarea"]       = "Muokkaa alueen tai huoneen kuvausta";
+$vocab["editroom"]           = "Muokkaa huoneen tietoja";
+$vocab["update_room_failed"] = "Huoneen tietojen päivitys epäonnistui: ";
+$vocab["error_room"]         = "Virhe: huonetta ";
+$vocab["not_found"]          = " ei löytynyt";
+$vocab["update_area_failed"] = "Alueen tietojen päivitys epäonnistui: ";
+$vocab["error_area"]         = "Virhe: aluetta ";
+$vocab["room_admin_email"]   = "Huonevastaavan sähköposti";
+$vocab["area_admin_email"]   = "Aluevastaavan sähköposti";
+$vocab["area_first_slot_start"]   = "Kalenterin alkamisaika";
+$vocab["area_last_slot_start"]    = "Kalenterin päättymisaika";
+$vocab["area_res_mins"]           = "Tarkkuus (minuutteja)";
+$vocab["area_def_duration_mins"]  = "Oletuskesto (minuutteja)";
+$vocab["invalid_area"]            = "Virheellinen alue!";
+$vocab["invalid_room_name"]       = "Tämä huone on jo käytössä alueella!";
+$vocab["invalid_email"]      = "Virheellinen sähköpostiosoite!";
+$vocab["invalid_resolution"]      = "Virheellinen alkamisajankohta, päättymisajankohta ja tarkkuus!";
+$vocab["too_many_slots"]          = 'Kasvata arvoa $max_slots asetustiedostossa!';
+$vocab["general_settings"]        = "Yleiset";
+$vocab["time_settings"]           = "Slot times";
+$vocab["private_settings"]        = "Yksityinen varaus";
+$vocab["allow_private"]           = "Salli yksityiset varaukset";
+$vocab["force_private"]           = "Aseta varaukset yksityisiksi";
+$vocab["default_settings"]        = "Oletusarvo";
+$vocab["default_private"]         = "Yksityinen";
+$vocab["default_public"]          = "Julkinen";
+$vocab["private_display"]         = "Yksityiset varaukset (näyttö)";
+$vocab["private_display_label"]   = "Miten yksityiset varaukset näytetään?";
+$vocab["private_display_caution"] = "VAROITUS: mieti tarkkaan yksityisten varausten seurauksia ennen kuin muutat asetuksia!";
+$vocab["treat_respect"]           = "Noudata varauksen julkisuusasetuksia";
+$vocab["treat_private"]           = "Näytä varaukset yksityisinä riippumatta julkisuusasetuksista";
+$vocab["treat_public"]            = "Näytä varaukset julkisina riippumatta julkisuusasetuksista";
+
+// Used in edit_users.php
+$vocab["name_empty"]         = "Merkinnän nimeä ei määritelty.";
+$vocab["name_not_unique"]    = "on jo käytössä. Valitse toinen nimi.";
+
+// Used in del.php
+$vocab["deletefollowing"]    = "Seuraavat varaukset poistetaan";
+$vocab["sure"]               = "Oletko varma?";
+$vocab["YES"]                = "KYLLÄ";
+$vocab["NO"]                 = "EN";
+$vocab["delarea"]            = "Sinun täytyy poistaa kaikki alueen huoneet ennnen kuin voit poistaa alueen.<p>";
+
+// Used in help.php
+$vocab["about_mrbs"]         = "Tietoja varausjärjestelmästä";
+$vocab["database"]           = "Tietokanta";
+$vocab["system"]             = "Käyttöjärjestelmä";
+$vocab["servertime"]         = "Palvelimen aika";
+$vocab["please_contact"]     = "Järjestelmän yhteyshenkilö ";
+$vocab["for_any_questions"]  = "antaa lisätietoja mikäli et löydä vastausta kysymykseesi näistä ohjeista.";
+
+// Used in mysql.inc AND pgsql.inc
+$vocab["failed_connect_db"]  = "Järjestelmävirhe: Tietokantayhteyden avaaminen ei onnistu.";
+
+// Entry types
+$vocab["type.I"]             = "Sisäinen";
+$vocab["type.E"]             = "Ulkoinen";
+
+?>

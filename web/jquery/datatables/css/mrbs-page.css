@@ -1,0 +1,19 @@
+/* $Id: mrbs-page.css 2064 2011-10-03 13:01:55Z cimorrison $
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * General page setup
+ */
+
+.css_right {
+  float: right;
+}
+
+.css_left {
+  float: left;
+}
+
+.demo_links {
+  float: left;
+  width: 50%;
+  margin-bottom: 1em;
+}
