@@ -29,7 +29,7 @@
 //
 // A list of valid timezones can be found at http://php.net/manual/timezones.php
 // The following line must be uncommented by removing the '//' at the beginning
-//$timezone = "Europe/London";
+$timezone = "Europe/Oslo";
 
 
 /*******************
@@ -42,11 +42,11 @@ $dbsys = "mysql";
 // to use Unix Domain Sockets instead of TCP/IP.
 $db_host = "localhost";
 // Database name:
-$db_database = "mrbs";
+$db_database = "mrbsgit";
 // Database login user name:
 $db_login = "mrbs";
 // Database login password:
-$db_password = 'mrbs-password';
+$db_password = 'mrbs';
 // Prefix for table names.  This will allow multiple installations where only
 // one database is available
 $db_tbl_prefix = "mrbs_";
@@ -57,6 +57,9 @@ $db_tbl_prefix = "mrbs_";
 /* Add lines from systemdefaults.inc.php and areadefaults.inc.php below here
    to change the default configuration. Do _NOT_ modify systemdefaults.inc.php
    or areadefaults.inc.php.  */
+
+$auth["user"]["admin"] = "admin";
+$auth["admin"][] = "admin";
 
 
 ?>

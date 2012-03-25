@@ -2,10 +2,10 @@
 
 // $Id: mrbs.css.php 2217 2011-12-29 17:14:25Z cimorrison $
 
-require_once "systemdefaults.inc.php";
-require_once "config.inc.php";
-require_once "functions.inc";
-require_once "theme.inc";
+require_once "../systemdefaults.inc.php";
+require_once "../config.inc.php";
+require_once "../functions.inc";
+require_once "../theme.inc";
 
 header("Content-type: text/css"); 
 expires_header(60*30); // 30 minute expiry

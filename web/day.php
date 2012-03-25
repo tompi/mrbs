@@ -20,10 +20,16 @@ $timestamp = mktime(12, 0, 0, $month, $day, $year);
 // print the page header
 print_header($day, $month, $year, $area, isset($room) ? $room : "");
 
-echo "<div id=\"dwm_header\" class=\"screenonly\">\n";
+echo "<div id=\"dwm_header\" class=\"screenonly row-fluid\">\n";
 
 // Show all available areas
+echo "<div class=\"span2\">\n";
 echo make_area_select_html('day.php', $area, $year, $month, $day);
+echo "</div>\n";
+// Show all available rooms in the current area:
+echo "<div class=\"span3\">\n";
+echo make_room_select_html('week.php', $area, null, $year, $month, $day);
+echo "</div>\n";
 
 // Draw the three month calendars
 if (!$display_calendar_bottom)
@@ -113,7 +119,7 @@ else
   // and output them
   echo $before_after_links_html;
 
-  echo "<table class=\"dwm_main\" id=\"day_main\">\n";
+  echo "<table class=\"dwm_main table table-bordered\" id=\"day_main\">\n";
   echo day_table_innerhtml($day, $month, $year, $room, $area, $timetohighlight);
   echo "</table>\n";
   

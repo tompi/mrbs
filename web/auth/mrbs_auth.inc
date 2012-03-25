@@ -2,11 +2,11 @@
 // $Id: mrbs_auth.inc 2149 2011-10-25 09:47:01Z cimorrison $
 
 // include the authentification wrappers
-require_once "auth_$auth[type].inc";
+require_once "auth/auth_$auth[type].inc";
 
 if (isset($auth['session']))
 {
-  require_once "session_$auth[session].inc";
+  require_once "session/session_$auth[session].inc";
 }
 
 // MINIMUM PAGE ACCESS LEVELS

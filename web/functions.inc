@@ -1082,7 +1082,7 @@ function make_area_select_html($link, $current, $year, $month, $day)
   // there's no point
   if ($res  && (sql_count($res) > 1))
   {
-    $out_html .= "<div id=\"dwm_areas\">\n";
+    $out_html .= "<div id=\"dwm_areas\" class=\"well\">\n";
     $out_html .= "<h3>" . get_vocab("areas") . "</h3>\n";
     if ($area_list_format == "select")
     {
@@ -1105,12 +1105,12 @@ function make_area_select_html($link, $current, $year, $month, $day)
     }
     else // list format
     {
-      $out_html .= "<ul>\n";
+      $out_html .= "<ul class=\"nav nav-pills nav-stacked\">\n";
       for ($i = 0; ($row = sql_row_keyed($res, $i)); $i++)
       {
-        $out_html .= "<li><a href=\"$link?year=$year&amp;month=$month&amp;day=$day&amp;area=${row['id']}\">";
-        $out_html .= "<span" . (($row['id'] == $current) ? ' class="current"' : '') . ">";
-        $out_html .= htmlspecialchars($row['area_name']) . "</span></a></li>\n";
+        $out_html .= "<li" . (($row['id'] == $current) ? ' class="active"' : '') . ">";
+        $out_html .= "<a href=\"$link?year=$year&amp;month=$month&amp;day=$day&amp;area=${row['id']}\">";
+        $out_html .= htmlspecialchars($row['area_name']) . "</a></li>\n";
       }
       $out_html .= "</ul>\n";
     }
@@ -1137,7 +1137,7 @@ function make_room_select_html ($link, $area, $current, $year, $month, $day)
   // there's no point
   if ($res && (sql_count($res) > 1))
   {
-    $out_html .= "<div id=\"dwm_rooms\">\n";
+    $out_html .= "<div id=\"dwm_rooms\" class=\"well\">\n";
     $out_html .= "<h3>" . get_vocab("rooms") . "</h3>";
     if ($area_list_format == "select")
     {
@@ -1162,12 +1162,12 @@ function make_room_select_html ($link, $area, $current, $year, $month, $day)
     }
     else  // list format
     {
-      $out_html .= "<ul>\n";
+      $out_html .= "<ul class=\"nav nav-pills\">\n";
       for ($i = 0; ($row = sql_row_keyed($res, $i)); $i++)
       {
-        $out_html .= "<li><a href=\"$link?year=$year&amp;month=$month&amp;day=$day&amp;area=$area&amp;room=".$row['id']."\">";
-        $out_html .= "<span" . (($row['id'] == $current) ? ' class="current"' : '') . ">";
-        $out_html .= htmlspecialchars($row['room_name']) . "</span></a></li>\n";
+        $out_html .= "<li" . (($row['id'] == $current) ? ' class="active"' : '') . ">";
+        $out_html .= "<a href=\"$link?year=$year&amp;month=$month&amp;day=$day&amp;area=$area&amp;room=".$row['id']."\">";
+        $out_html .= htmlspecialchars($row['room_name']) . "</a></li>\n";
       }
       $out_html .= "</ul>\n";
     }

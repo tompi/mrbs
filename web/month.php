@@ -345,7 +345,7 @@ if ($debug_flag)
   echo "</pre>\n";
 }
 
-echo "<table class=\"dwm_main\" id=\"month_main\">\n";
+echo "<table class=\"dwm_main table table-bordered\" id=\"month_main\">\n";
 
 // Weekday name header row:
 echo "<thead>\n";

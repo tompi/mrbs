@@ -18,7 +18,7 @@ print_header($day, $month, $year, $area, isset($room) ? $room : "");
 
 // Section with areas, rooms, minicals.
 
-echo "<div id=\"dwm_header\" class=\"screenonly\">\n";
+echo "<div id=\"dwm_header\" class=\"screenonly row-fluid\">\n";
 
 // Get the area and room names (we will need them later for the heading)
 $this_area_name = "";
@@ -30,14 +30,20 @@ $this_room_name = sql_query1("SELECT room_name FROM $tbl_room WHERE id=$room AND
 $room_invalid = ($this_area_name === -1) || ($this_room_name === -1);
 
 // Show all available areas
+echo "<div class=\"span2\">\n";
 echo make_area_select_html('week.php', $area, $year, $month, $day);   
+echo "</div>\n";
 // Show all available rooms in the current area:
+echo "<div class=\"span3\">\n";
 echo make_room_select_html('week.php', $area, $room, $year, $month, $day);
+echo "</div>\n";
 
 // Draw the three month calendars
 if (!$display_calendar_bottom)
 {
+  echo "<div class=\"span7\">\n";
   minicals($year, $month, $day, $area, $room, 'week');
+  echo "</div>\n";
 }
 
 echo "</div>\n";
@@ -94,7 +100,7 @@ $before_after_links_html = "
 
 print $before_after_links_html;
 
-echo "<table class=\"dwm_main\" id=\"week_main\">";
+echo "<table class=\"dwm_main table table-bordered\" id=\"week_main\">";
 echo week_table_innerhtml($day, $month, $year, $room, $area, $timetohighlight);
 echo "</table>\n";
 
