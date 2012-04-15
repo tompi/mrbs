@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mrbs + bootstrap by tompi</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Mrbs + bootstrap</h1>
+        <p>A nice and smooth ui for mrbs</p>
+        <p class="view"><a href="https://github.com/tompi/mrbs">View the Project on GitHub <small>tompi/mrbs</small></a></p>
+        <ul>
+          <li><a href="https://github.com/tompi/mrbs/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/tompi/mrbs/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/tompi/mrbs">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Fork of: Meeting Room Booking System</p>
+
+<h2><a href="http://mrbs.sourceforge.net/">http://mrbs.sourceforge.net/</a></h2>
+
+<p>The Meeting Room Booking System (MRBS) is a PHP-based application for
+booking meeting rooms (surprisingly!). I got annoyed with the piles of books
+which were being used to book meetings. They were slow, hard to edit and only
+at the reception desk. I thought that a nice web-based system would be much
+nicer.</p>
+
+<p>Some parts of this are based on WebCalender 0.9.4 by Craig Knudsen 
+(<a href="http://www.radix.net/~cknudsen/webcalendar/">http://www.radix.net/~cknudsen/webcalendar/</a>) but there is now very little
+which is similar. There are fundamental design goal differences between
+WebCalendar and MRBS - WC is for individuals, MRBS is for meeting rooms.</p>
+
+<p>The fork: An attempt at sprucing up the layout.
+Here are some screenshots(click for full size).</p>
+
+<p><a href="https://github.com/tompi/mrbs/raw/master/bs1.png">
+    <img src="https://github.com/tompi/mrbs/raw/master/bs1-small.png"></a>
+<a href="https://github.com/tompi/mrbs/raw/master/bs2.png">
+    <img src="https://github.com/tompi/mrbs/raw/master/bs2-small.png"></a></p>
+
+<hr><h2>To Use</h2>
+
+<p>See the INSTALL file for installation instructions.</p>
+
+<p>Once it's installed try going to http://yourhost/mrbs/ - if you loaded the
+sample data, this should give you a view of the first area meeting rooms
+for today. The (+) symbol means you can add new meetings by clicking
+there. Try it - it should all be pretty obvious. If you haven't loaded the
+sample data, start by clicking on Admin to add your Areas and Rooms.</p>
+
+<p>By default, anyone can connect and only demo users "alice" and "bob" can add 
+new meetings (passwords "a" and "b"), and only connections
+from user "administrator"/"secret" are administrators. Only administrators 
+can add rooms and areas, and modify any other users' meetings.  See 
+AUTHENTICATION for a more complete description of the authentication.</p>
+
+<p>If you copy testdata.php into your web site, you can view
+http://yourhost/mrbs/testdata.php - it will generate a whole load of random
+appointments to fill up the calendar and let you play around. (Don't leave
+testdata.php in your web site, though.)</p>
+
+<p>The latest version was tested with PHP 4.3.2, Apache 1.3.28, and either
+MySQL 4.0.14 or PostgreSQL 7.2. It should work on just about anything
+that's got PHP4 with MySQL or PostgreSQL support but PostgreSQL 7.3 and above.
+MRBS has also been somewhat tested on PHP 5.1.2, MySQL 5.0.18 and Apache
+2.2.0, using both the mysql and mysqli database access methods.</p>
+
+<p>It should be pretty easy to adjust it to your corporate colours - the file
+mrbs.css is used on every page, as is style.inc. Just fiddle with these until
+you get the result you like. </p>
+
+<p>See COPYING for licensing info.</p>
+
+<p>See NEWS for a history of changes.</p>
+
+<p>See AUTHENTICATION for information about user authentication/passwords.</p>
+
+<hr><h2>Requirements:</h2>
+
+<ul>
+<li>PHP4/5 with MySQL and/or PostgreSQL support</li>
+<li>MySQL or PostgreSQL</li>
+<li>Any web server that is supported by PHP</li>
+</ul><p>Recommended:
+- JavaScript-enabled browser
+- CSS-enabled browser
+- PHP module connection to the server (also called SAPI) if you want to use any
+  of the basic http authentication schemes provided.</p>
+
+<p>(If you are considering porting MRBS to another database, see README.sqlapi)</p>
+
+<p>Warning:
+- Some users reported errors using some accelerators (APC, PHP Accelerator).
+  If you get messages like this : "Internal Zend error - Missing class
+  information for ...", your accelerator is the cause.</p>
+
+<hr><h2>Usage:</h2>
+
+<p>The current project maintainer reports using it at work with about 150 clients.
+Many other reports of successful use have been seen on the MRBS mailing list,
+and your report would be welcome there too. Let us know who is using MRBS!</p>
+
+<p>$Id: README 798 2008-04-13 19:59:24Z jberanek $</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/tompi">tompi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
