@@ -13,7 +13,11 @@ Some parts of this are based on WebCalender 0.9.4 by Craig Knudsen
 which is similar. There are fundamental design goal differences between
 WebCalendar and MRBS - WC is for individuals, MRBS is for meeting rooms.
 
-The fork: An attempt at sprucing up the layout
+The fork: An attempt at sprucing up the layout.
+Here are some screenshots(click for full size).
+
+<a href="bs1.png"><img src="bs1-small.png"></a>
+<a href="bs2.png"><img src="bs2-small.png"></a>
 
 ------
 To Use

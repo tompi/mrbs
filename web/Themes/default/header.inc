@@ -181,7 +181,7 @@ function print_theme_header($day, $month, $year, $area, $room)
             // the date is changed, we still need a submit button because there
             // are occasions when you want to go to the date without changing it -
             // for example when you've been on a Search or Report page
-            echo "<input type=\"submit\" value=\"" . get_vocab("goto") . "\">\n";
+            echo "<input type=\"submit\" class=\"btn\" value=\"" . get_vocab("goto") . "\">\n";
             ?>
            </div>
         </form>

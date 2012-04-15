@@ -106,7 +106,7 @@ function PrintLogonBox()
       <div>
         <input type="hidden" name="TargetURL" value="<?php echo htmlspecialchars($TargetURL) ?>">
         <input type="hidden" name="Action" value="QueryName">
-        <input type="submit" value=" <?php echo get_vocab('login') ?> ">
+        <input type="submit" class="btn" value=" <?php echo get_vocab('login') ?> ">
       </div>
     </form>
 <?php
